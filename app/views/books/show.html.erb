@@ -1,10 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
 
-<%= render @book %>
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
 
-<div>
-  <%= link_to "Edit this book", edit_book_path(@book) %> |
-  <%= link_to "Back to books", books_path %>
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency(@book.price) %>
+</p>
 
-  <%= button_to "Destroy this book", @book, method: :delete %>
-</div>
+<p>
+  <strong>Published Date:</strong>
+  <%= @book.published_date %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back to Books', books_path %>
+
